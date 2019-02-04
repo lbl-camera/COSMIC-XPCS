@@ -16,3 +16,7 @@ h1, h2 {
 .highlight pre, code{
     background-color: #888;
 }
+
+a:hover {
+    text-shadow: 0 0 8px #0dd;
+}
