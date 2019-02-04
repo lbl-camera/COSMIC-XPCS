@@ -11,7 +11,7 @@ The log of these services can be read by :code:`journalctl -u ...`. The services
 Caproto IOC
 -----------
 
-.. code-block::
+.. code-block:: jproperties
 
     [Unit]
     Description=Caproto IOC Service
@@ -27,7 +27,7 @@ Caproto IOC
 EPICS IOC
 ---------
 
-.. code-block::
+.. code-block:: jproperties
 
     [Unit]
     Description=EPICS IOC Service
@@ -43,7 +43,7 @@ EPICS IOC
 Jupyter Hub
 -----------
 
-.. code-block::
+.. code-block:: jproperties
 
     [Unit]
     Description=Jupyterhub
