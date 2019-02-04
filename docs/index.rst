@@ -10,6 +10,9 @@ Welcome to COSMIC XPCS's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   locations
+   services
+
 
 
 Indices and tables
