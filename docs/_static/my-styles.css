@@ -9,6 +9,14 @@
 /*# "headbgcolor":"#555",*/
 /*# "headtextcolor":"#0dd"*/
 
-h1 {
+h1, h2 {
     color:#0dd;
+}
+
+.highlight {
+    background-color: #888;
+}
+
+.code {
+    background-color: #888;
 }
