@@ -1,9 +1,11 @@
 Services on Tsuru
 =================
 
-Two services exist on Tsuru to automate startup of resources: a Caproto IOC service and an EPICS IOC service. Their unit files are at :code:`/etc/systemd/system/`.
+Three services exist on Tsuru to automate startup of resources: a Caproto IOC service, an EPICS IOC service, and a
+Jupyter Hub service. Their unit files are at :code:`/etc/systemd/system/`.
 
-The log of these services can be read by :code:`journalctl -u ...`. The services can be configured with :code:`systemctl`.
+The log of these services can be read by :code:`journalctl -u ...`. The services can be configured with
+:code:`systemctl`.
 
 
 Caproto IOC
@@ -37,6 +39,24 @@ EPICS IOC
 
     [Install]
     WantedBy=multi-user.target
+
+Jupyter Hub
+-----------
+
+.. code-block::
+
+    [Unit]
+    Description=Jupyterhub
+    After=syslog.target network.target
+
+    [Service]
+    User=root
+    ExecStart=/usr/bin/jupyterhub -f /etc/jupyter/jupyterhub_config.py
+
+    [Install]
+    WantedBy=multi-user.target
+
+The above unit file is at :code:`/lib/systemd/system/`.
 
 Note
 ----
