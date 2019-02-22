@@ -10,6 +10,7 @@ Welcome to COSMIC XPCS's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   startup
    locations
    services
    todo
