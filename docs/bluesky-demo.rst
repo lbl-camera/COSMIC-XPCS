@@ -24,6 +24,8 @@ Try a simple plan! This plan scans simulated detector over a simulated motor ran
     dets = [det]   # just one in this case, but it could be more than one
 
     RE(scan(dets, motor, -1, 1, 10))
+    
+In this example, :code:`scan` is a built-in "plan" that acquires from detectors across a given range. Passing :code:`scan(...)` into :code:`RE(...)` is necessary to execute this plan. This is an important subtlety.
 
 Other cool things
 -----------------
