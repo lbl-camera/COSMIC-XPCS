@@ -35,7 +35,13 @@ EPICS IOC
     After=network.target
 
     [Service]
-    ExecStart=/usr/local/epics/R7.0.1.1/support/areadetector/3-2/ADFastCCD/iocs/FastCCDIOC/iocBoot/iocFastCCD/st.cmd
+    WorkingDirectory=/usr/local/epics/R7.0.1.1/support/areadetector/3-2/ADFastCCD/iocs/FastCCDIOC/iocBoot/iocFastCCD
+    ExecStart=/usr/local/epics/R7.0.1.1/support/areadetector/3-2/ADFastCCD/iocs/FastCCDIOC/bin/linux-x86_64/FastCCDApp /usr/local/epics/R7.0.1.1/support/areadetector/3-2/ADFastCCD/iocs/FastCCDIOC/iocBoot/iocFastCCD/st.cmd
+    StandardInput=tty
+    StandardOutput=journal
+    TTYPath=/dev/tty50
+    KillMode=process
+    Restart=always
 
     [Install]
     WantedBy=multi-user.target
