@@ -42,8 +42,8 @@ The FastCCD can be initialized and checked from fastcameraATCA1.dhcp.lbl.gov whe
 - Under [Expose], select Exposure Mode -> Continuous
 
     When all modules are masked in the fcric, the standard test pattern is sent. The fiber optic test pattern can also be sent; this is toggled with:
-        - FOtestpatter_on.py
-        - FOtestpattern_off.py
+        - setFOtestpatter_on.py
+        - setFOtestpattern_off.py
 
 Starting Tsuru
 --------------
@@ -54,17 +54,17 @@ also interrupts the EPICS IOC. After closing the FCCD GUI, the EPICS IOC must be
 Restarting the EPICS IOC
 ------------------------
 
-The EPICS IOC is configured to run as a :doc:`systemd service <services>`. To restart it, use:
+The EPICS IOC is configured to run as a [systemd service](services). To restart it, use:
 
-.. codeblock:: bash
-
+```
     sudo systemctl restart epics.service
+```
 
-For more info on systemctl, see `Arch's systemd <https://wiki.archlinux.org/index.php/systemd>`_.
+For more info on systemctl, see [Arch's systemd](https://wiki.archlinux.org/index.php/systemd).
 
 Notes
 -----
 
 - Configure Tsuru networking
-    - 2: ens420 = 10G -> 10.0.6.42
+    - 2: ens4f0 = 10G -> 10.0.6.42 (Not sure if 5 or 6)
     - 4: enp179sf0 = Base -> 192.168.1.42

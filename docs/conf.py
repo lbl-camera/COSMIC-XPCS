@@ -49,6 +49,9 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    "sphinx.ext.napoleon",
+    "recommonmark",
+    "sphinx_markdown_tables"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -277,6 +280,10 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 todo_include_todos = True
 
 def setup(app):
-    app.add_stylesheet("my-styles.css") # also can be a full URL
-    # app.add_stylesheet("ANOTHER.css")
-    # app.add_stylesheet("AND_ANOTHER.css")
+    app.add_stylesheet("my-styles.css")
+    # Allow md files to evaluate marked sections as rst
+    app.add_config_value("recommonmark_config", {"enable_eval_rst": True}, True)
+    # app.add_transform(AutoStructify)
+
+    # app.add_autodocumenter(SimpleClassDocumenter)
+    # app.add_autodocumenter(SimpleFunctionDocumenter)
