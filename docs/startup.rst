@@ -48,7 +48,19 @@ The FastCCD can be initialized and checked from fastcameraATCA1.dhcp.lbl.gov whe
 Starting Tsuru
 --------------
 
-Tsuru is fully configured to start automatically. The FCCD must be closed for Tsuru to receive data.
+Tsuru is fully configured to start automatically. The FCCD GUI must be closed for Tsuru to receive data. The FCCD GUI
+also interrupts the EPICS IOC. After closing the FCCD GUI, the EPICS IOC must be restarted.
+
+Restarting the EPICS IOC
+------------------------
+
+The EPICS IOC is configured to run as a :doc:`systemd service <services>`. To restart it, use:
+
+.. codeblock:: bash
+
+    sudo systemctl restart epics.service
+
+For more info on systemctl, see `Arch's systemd <https://wiki.archlinux.org/index.php/systemd>`_.
 
 Notes
 -----
