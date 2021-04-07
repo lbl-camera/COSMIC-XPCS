@@ -13,6 +13,7 @@ Welcome to COSMIC XPCS's documentation!
    startup
    locations
    services
+   troubleshoot_network
    todo
 
 
