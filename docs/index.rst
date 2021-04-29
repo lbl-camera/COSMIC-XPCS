@@ -7,7 +7,7 @@ Welcome to COSMIC XPCS's documentation!
 =======================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    startup
@@ -15,6 +15,8 @@ Welcome to COSMIC XPCS's documentation!
    services
    troubleshoot_network
    todo
+   notes
+   iptables
 
 
 Indices and tables
